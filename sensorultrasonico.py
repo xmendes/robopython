@@ -1,5 +1,4 @@
-
-# -*- coding: latin_1 -*-
+# -*- coding: utf-8 -*-
 
 import RPi.GPIO as GPIO
 import time
@@ -24,7 +23,7 @@ def sensor():
         # Seta o pino do gatilho como desligado
         GPIO.output(GPIO_Gatilho, False)
          
-        # Aguarda 10 segundos para instruÁ„o
+        # Aguarda 10 segundos para instru√ß√£o
         time.sleep(1)
      
         # envia um pulso de 10us no gatilho
@@ -59,7 +58,7 @@ def sensor():
         
 
 
-        #  parte do espeak (ignore caso n„o queira usar)-------------------------
+        #  parte do espeak (ignore caso n√£o queira usar)-------------------------
         #converte float em string
         distancia = str("%.1f" %distancia_total)
         # substitue ponto por virgula
@@ -67,5 +66,3 @@ def sensor():
            #distancia = distancia.replace(".",",")
            espeakfala ="OBJETO PROXIMO, POR FAVOR RETIRE O OBJETO OU VOLTE PARA TRAZ. A distancia e de ", distancia ," centimetros"
            os.system('espeak -vpt -s 150 "{0}"'.format(espeakfala))
-
-
