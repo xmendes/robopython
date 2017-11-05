@@ -52,7 +52,7 @@ print(gamepad)
 try: 
 
  while True:
-       distance = sensorultrasonico.sensor()
+       sensorultrasonico.sensor()
 
        controle.botoes()
        
